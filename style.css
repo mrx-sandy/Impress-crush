@@ -1,4 +1,4 @@
-/* author - deepak tiwari */
+/* author - deepak tiwari
 * {
     margin: 0;
     padding: 0;
@@ -48,3 +48,137 @@
     bottom: 0;
 
   }
+
+
+ */
+
+
+
+
+
+
+  /* author - Sandip Gadekar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  }
+  100% {
+      background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+h1 {
+  color: #ff6b81;
+  animation: textPopUp 2s;
+}
+
+@keyframes textPopUp {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+h2 {
+  color: #ff6b81;
+}
+
+p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.container .tenor-gif-embed {
+  max-width: 200px;
+}
+
+.container .btn {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #fff;
+  background: #ff6b81;
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(255, 107, 129, 0.5);
+  transition: transform 0.3s, background 0.3s;
+  animation: btnBounce 2s infinite alternate;
+}
+
+.btn a:hover {
+  transform: translateY(-5px);
+  background: #ff4e70;
+}
+
+@keyframes btnBounce {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-10px);
+  }
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.footer h6 {
+  color: #555;
+}
+
+.footer h4 {
+  color: #ff6b81;
+  margin-top: 5px;
+  animation: textPopUp 2s;
+}
