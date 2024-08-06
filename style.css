@@ -54,10 +54,7 @@
 
 
 
-
-
-
-  /* author - Sandip Gadekar */
+/* author - Sandip Gadekar */
 * {
   margin: 0;
   padding: 0;
@@ -71,17 +68,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-  animation: backgroundAnimation 10s infinite alternate;
+  background-color: #ffe5e5;
 }
 
-@keyframes backgroundAnimation {
-  0% {
-      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-  }
-  100% {
-      background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
-  }
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
 }
 
 .container {
@@ -92,7 +101,7 @@ body {
   gap: 20px;
   max-width: 500px;
   padding: 20px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   animation: fadeIn 2s ease-in;
